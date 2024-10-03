@@ -1,0 +1,218 @@
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed';
+    font-size: 13px;
+    margin: 3rem;
+}
+
+/* General rules for all containers */
+
+.body-containers {
+    border-radius: 15px;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.image-containers {
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+}
+
+.customer-name-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.name-and-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    padding-left: 1rem;
+}
+
+.student-white-names-heading {
+    color: hsl(0, 0%, 100%);
+}
+
+.student-blue-names-heading {
+    color: hsl(217, 19%, 35%);
+}
+
+.review-paragraphs {
+    line-height: 1.5;
+}
+
+/* Specific rules for containers */
+
+.daniel-image {
+    border: 2.5px solid hsl(263, 55%, 72%);
+}
+
+.patrick-image {
+    border: 2.5px solid hsl(263, 55%, 52%)
+}
+
+.daniel-verified-graduate {
+    color: hsl(265, 51%, 70%);
+}
+
+/* Jeanette, Patrick, and Kira Verified Graduates */
+
+.other-verified-graduates {
+    color: #aeb1b6;
+}
+
+.jj-patrick-verified-graduate {
+    color: #8a95a0;
+}
+
+/* Backgrond Image (Quotation Marks) Alignment */
+
+.daniel-container {
+    background-color: hsl(263, 55%, 52%);
+    position: relative;
+    z-index: 2;
+}
+
+.daniel-container::before {
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;  
+    content: '';
+    height: 100px;
+    opacity: 0.4; 
+    position: absolute;
+    right: 20px; 
+    top: 39px;
+    width: 100px;
+    z-index: 1;
+}
+
+/* Specific rules for containers */
+
+.jonathan-container {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.jeanette-container {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.patrick-container {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.kira-container {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.daniel-heading, .jonathan-heading, .jeanette-heading {
+    font-size: 26px;
+}
+
+/* White Headings */
+
+.patrick-heading {
+    font-size: 25px;
+}
+
+.kira-heading {
+    font-size: 25px;
+}
+
+/* Review Paragrahs */
+
+.daniel-paragraph {
+    color: hsl(265, 51%, 70%);
+    font-size: 17.3px;
+    max-width: 99%;
+}
+
+.jonathan-paragraph {
+    color: hsl(215, 12%, 68%);
+    font-size: 15px;
+}
+
+.jeanette-paragraph {
+    color: hsl(226, 6%, 60%);
+    font-size: 17px;
+}
+
+.patrick-paragraph {
+    color: hsl(220, 8%, 72%);
+    font-size: 17px;
+}
+
+.kira-paragraph {
+    color: hsl(226, 6%, 60%);
+    font-size: 13px;
+}
+
+@media screen and (min-width: 1400px) {
+
+    /* Grid */
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    }
+    .jeanette-container, .patrick-container {
+        margin-top: -20rem;
+    }
+
+    .daniel-container {
+        grid-column: span 2;
+        max-height: 35%;
+    }
+
+    .jonathan-container {
+        grid-column: span 1; /* These containers each take up 1 column */
+        max-height: 35%;
+    }
+
+    .kira-container {
+        align-self: stretch; /* Ensure Kira's container stretches vertically */
+        grid-column: 4 / span 1; /* Place Kira in the fourth column */
+        grid-row: 1; /* Move Kira to the first row */
+    }
+
+    .jeanette-container {
+        grid-column: 1 / span 1; /* Place Jeanette in the first column */
+        grid-row: 2; /* Move Jeanette to the second row */
+    }
+
+    .patrick-container {
+        align-self: start;
+        grid-column: span 2;
+    }
+    /* Backgrond Image (Quotation Marks) Alignment */
+
+    .daniel-container::before {
+        opacity: 0.4; 
+        right: 95px;
+        top: 28px;
+        z-index: 1;
+    }
+
+    /* Typography */
+
+    .daniel-heading, .jeanette-heading, .patrick-heading {
+        font-size: 22px;
+    }
+
+    .daniel-paragraph, .jonathan-paragraph, .kira-paragraph, .jeanette-paragraph {
+        font-size: 14px;
+    }
+
+    .jonathan-heading {
+        font-size: 20px;
+    }
+
+    .kira-heading {
+        font-size: 20px;
+    }
+
+    .patrick-paragraph {
+        font-size: 14.5px;
+    }
+}
